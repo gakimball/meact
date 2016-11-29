@@ -1,0 +1,37 @@
+{
+  "name": "meact",
+  "version": "0.0.1",
+  "description": "Customizable Markdown React renderer",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --watch",
+    "prepublish": "webpack",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gakimball/meact.git"
+  },
+  "keywords": [
+    "meact"
+  ],
+  "author": "Geoff Kimball <geoff@geoffkimball.com> (http://geoffkimball.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gakimball/meact/issues"
+  },
+  "homepage": "https://github.com/gakimball/meact#readme",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "chai": "^3.5.0",
+    "json-loader": "^0.5.4",
+    "mocha": "^3.2.0",
+    "webpack": "^1.13.3"
+  },
+  "dependencies": {
+    "markdown-it": "^8.1.0"
+  }
+}

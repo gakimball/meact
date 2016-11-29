@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>meact</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/foundation.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react-dom.js"></script>
+    <script src="meact.js"></script>
+  </head>
+  <body>
+    <div class="large-6 column row">
+      <div id="app"></div>
+    </div>
+    <script>
+const input = `
+# Title
+
+## Sub-title
+
+Hello **to the** world and [also to you](http://google.com "Google"). And URLs like <http://zombo.com> work.
+
+> Blockquote
+
+> And a multi-line
+> blockquote.
+
+- Eggs
+- Bacon
+  - Toast
+  - Also
+
+1. One
+2. Two
+3. Three
+7. Four
+
+---
+
+This is some \`code\`.
+
+\`\`\`css
+.ohHai {
+  color: white;
+}
+\`\`\`
+
+![Kitten](http://placekitten.com/400/300)
+`;
+      const app = React.createElement(Meact.default, { input, });
+      const elem = document.querySelector('#app');
+
+      ReactDOM.render(app, elem);
+    </script>
+  </body>
+</html>
