@@ -44,6 +44,7 @@ jspm_packages
 *.tgz
 
 # Build artifacts
+lib
 meact.js
 meact.min.js
 meact.js.map

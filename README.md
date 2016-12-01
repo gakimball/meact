@@ -28,6 +28,26 @@ Yes, this is Zombo.com. This is Zombo.com, and welcome to you who have come to Z
 
 If you're not using a module loader, in the browser you can access the Markdown component on `window.meact.default`.
 
+## Supported features
+
+- [x] Blockquotes
+- [x] Bulleted Lists
+- [x] Code
+- [x] Dividers
+- [x] Emphasis
+- [x] Fences
+- [x] Headings
+- [x] Images
+- [x] Links
+- [x] Ordered Lists
+- [x] Paragraphs
+- [x] Line Breaks
+- [x] Strong
+- [ ] Reference Links
+- [ ] HTML
+- [ ] Tables
+- [ ] Syntax Highlighting
+
 ## Local Development
 
 ```bash

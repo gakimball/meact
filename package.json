@@ -2,10 +2,12 @@
   "name": "meact",
   "version": "0.0.1",
   "description": "Customizable Markdown React renderer",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "precompile": "rm -rf lib",
+    "compile": "babel src -d lib",
     "start": "webpack --watch",
-    "prepublish": "webpack",
+    "prepublish": "npm run compile",
     "test": "mocha"
   },
   "repository": {
@@ -22,6 +24,7 @@
   },
   "homepage": "https://github.com/gakimball/meact#readme",
   "devDependencies": {
+    "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.8",
     "babel-preset-latest": "^6.16.0",
