@@ -1,6 +1,6 @@
 {
   "name": "meact",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Customizable Markdown React renderer",
   "main": "lib/index.js",
   "scripts": {
