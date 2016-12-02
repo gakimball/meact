@@ -4,15 +4,12 @@ import ast from './util/ast';
 import renderTokens from './util/renderTokens';
 import components from './components';
 
-const md = new markdownIt();
-
 /**
  * Renders React components from a Markdown string.
- * @todo Allow for custom markdown-it instance.
  * @todo Allow for custom components.
  */
-export default function Markdown({ input }) {
-  const { nodes } = ast(md.parse(input));
+export default function Markdown({ input, renderer }) {
+  const { nodes } = ast(renderer.parse(input));
 
   return (
     <div>
@@ -25,7 +22,17 @@ export default function Markdown({ input }) {
  * Props that can be passed to `<Markdown />`.
  * @type Object
  * @prop {String} input - Markdown string.
+ * @prop {Object} [renderer] - markdown-it instance.
  */
 Markdown.propTypes = {
   input: PropTypes.string.isRequired,
+  renderer: PropTypes.object,
+}
+
+/**
+ * Default props for `<Markdown />`.
+ * @type Object
+ */
+Markdown.defaultProps = {
+  renderer: markdownIt(),
 }
