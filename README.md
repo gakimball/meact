@@ -47,6 +47,7 @@ If you're not using a module loader, in the browser you can access the Markdown 
 - [ ] HTML
 - [ ] Tables
 - [ ] Syntax Highlighting
+- [x] Strikethrough
 
 ## Local Development
 

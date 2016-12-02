@@ -12,9 +12,15 @@ import ListItem from './ListItem';
 import OrderedList from './OrderedList';
 import Paragraph from './Paragraph';
 import Softbreak from './Softbreak';
+import Strikethrough from './Strikethrough';
 import Strong from './Strong';
 import Text from './Text';
 
+/**
+ * Default components to render Markdown. Each property is a markdown-it token type and a corresponding React component to render that token.
+ * @constant
+ * @type Object.<String, Class>
+ */
 export default {
   blockquote: Blockquote,
   bullet_list: BulletList,
@@ -29,6 +35,7 @@ export default {
   list_item: ListItem,
   ordered_list: OrderedList,
   paragraph: Paragraph,
+  s: Strikethrough,
   softbreak: Softbreak,
   strong: Strong,
   text: Text,
