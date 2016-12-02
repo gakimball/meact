@@ -28,26 +28,28 @@ Yes, this is Zombo.com. This is Zombo.com, and welcome to you who have come to Z
 
 If you're not using a module loader, in the browser you can access the Markdown component on `window.meact.default`.
 
-## Supported features
+## Customization
 
-- [x] Blockquotes
-- [x] Bulleted Lists
-- [x] Code
-- [x] Dividers
-- [x] Emphasis
-- [x] Fences
-- [x] Headings
-- [x] Images
-- [x] Links
-- [x] Ordered Lists
-- [x] Paragraphs
-- [x] Line Breaks
-- [x] Strong
-- [ ] Reference Links
-- [ ] HTML
-- [ ] Tables
-- [ ] Syntax Highlighting
-- [x] Strikethrough
+You can pass in a custom instance of markdown-it to the `<Markdown />` component.
+
+```jsx
+import markdownIt from 'markdown-it';
+import emoji from 'markdown-it-emoji';
+
+const renderer = markdownIt().use(emoji);
+
+<Markdown renderer={renderer} />
+```
+
+## Feature Support
+
+All of markdown-it's built-in features will render as React-based HTML. Plugins should work, but haven't been tested yet.
+
+Features known not to work include:
+  - Reference links
+
+Features that are wonky:
+  - List items have `<p>` elements inside them, even if the item is one line of text.
 
 ## Local Development
 
