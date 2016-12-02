@@ -3,7 +3,11 @@
  * @param {Array[]} attrs - Attributes to map.
  * @param {Object.<String, String>} Mapped attributes.
  */
-export default function mapAttrs(attrs) {
+export default function mapAttrs(attrs = []) {
+  if (attrs === null) {
+    return {};
+  }
+
   const output = {};
 
   attrs.map(([name, value]) => {

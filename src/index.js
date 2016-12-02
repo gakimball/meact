@@ -14,8 +14,6 @@ const md = new markdownIt();
 export default function Markdown({ input }) {
   const { nodes } = ast(md.parse(input));
 
-  console.log(nodes);
-
   return (
     <div>
       {renderTokens(nodes, components)}
