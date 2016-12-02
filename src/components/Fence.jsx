@@ -1,3 +1,4 @@
+import React from 'react';
 import renderTokens from '../util/renderTokens';
 import tokenPropTypes from '../util/tokenPropTypes';
 

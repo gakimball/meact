@@ -3,7 +3,7 @@
  * @param {Array[]} attrs - Attributes to map.
  * @param {Object.<String, String>} Mapped attributes.
  */
-export default function mapAttrs(attrs = []) {
+export default function mapAttrs(attrs = null) {
   if (attrs === null) {
     return {};
   }
