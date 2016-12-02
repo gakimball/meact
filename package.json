@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "precompile": "rm -rf lib",
-    "compile": "babel src -d lib",
+    "compile": "babel src -d lib --ignore __tests__",
     "start": "webpack --watch",
     "prepublish": "npm run compile",
     "test": "mocha --compilers js:babel-register \"**/*/__tests__/**/*.{js,jsx}\""
