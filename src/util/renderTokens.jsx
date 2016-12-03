@@ -1,4 +1,5 @@
 import React from 'react';
+import selfClosingTags from '@f/self-closing-tags';
 import mapAttrs from './mapAttrs';
 
 /**
@@ -46,7 +47,7 @@ export default function renderTokens(tokens, components) {
 
     // These tags are self-closing
     // The AST doesn't indicate which tokens use self-closing tags, so they're all written out here
-    if (['img', 'hr', 'br'].indexOf(Tag) > -1) {
+    if (selfClosingTags.indexOf(Tag) > -1) {
       return <Tag {...mapAttrs(attrs)} key={index} />
     }
     // All other tags are standard

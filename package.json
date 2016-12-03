@@ -41,6 +41,7 @@
     "webpack": "^1.13.3"
   },
   "dependencies": {
+    "@f/self-closing-tags": "^1.0.1",
     "lodash.assign": "^4.2.0",
     "markdown-it": "^8.1.0"
   },
