@@ -10,6 +10,15 @@
 npm install meact
 ```
 
+The library has two peer dependencies:
+
+```
+{
+  "react": "15.x",
+  "markdown-it": "^8.1.0"
+}
+```
+
 ## Usage
 
 ```jsx

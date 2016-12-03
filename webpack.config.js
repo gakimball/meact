@@ -9,6 +9,7 @@ module.exports = {
   devtool: 'sourcemap',
   externals: {
     'react': 'React',
+    'markdown-it': 'markdownit',
   },
   module: {
     loaders: [
