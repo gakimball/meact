@@ -3,7 +3,7 @@ import assign from 'lodash.assign';
 import markdownIt from 'markdown-it';
 import ast from '../util/ast';
 import renderTokens from '../util/renderTokens';
-import defaultComponents from '../components';
+import defaultComponents from '../constants/defaultComponents';
 
 /**
  * Renders React components from a Markdown string.

@@ -1,6 +1,6 @@
 import React from 'react';
 import renderTokens from '../util/renderTokens';
-import tokenPropTypes from '../util/tokenPropTypes';
+import tokenPropTypes from '../constants/tokenPropTypes';
 
 /**
  * Renders a `fence` token.

@@ -1,4 +1,4 @@
-import Fence from './Fence';
+import Fence from '../components/Fence';
 
 /**
  * Special renderers for specific Markdown features.
