@@ -6,7 +6,8 @@
   "scripts": {
     "precompile": "rm -rf lib",
     "compile": "babel src -d lib --ignore __tests__",
-    "start": "webpack --watch",
+    "server": "lite-server",
+    "start": "webpack --watch & npm run server",
     "prepublish": "npm run compile & webpack",
     "test": "mocha --compilers js:babel-register \"**/*/__tests__/**/*.{js,jsx}\""
   },

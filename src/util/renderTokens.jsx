@@ -5,6 +5,7 @@ import mapAttrs from './mapAttrs';
 /**
  * Render components from a Markdown AST.
  * @param {Object[]} tokens - Tokens to render.
+ * @param {Object.<String, Function>} components - Special rendering components to use.
  * @returns {ReactElement[]} Series of React components.
  */
 export default function renderTokens(tokens, components) {
@@ -16,7 +17,8 @@ export default function renderTokens(tokens, components) {
     // Use a custom component if it exists for this token type
     if (token.type in components) {
       const Token = components[token.type];
-      return <Token token={token} components={components} key={index} />;
+      const render = tokens => renderTokens(tokens, components);
+      return <Token token={token} renderTokens={render} key={index} />;
     }
 
     // Inline tokens have no tag, they just render child nodes

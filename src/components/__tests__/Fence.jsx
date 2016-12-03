@@ -10,7 +10,7 @@ describe('<Fence />', () => {
   };
 
   before(() => {
-    wrapper = shallow(<Fence token={token} components={{}} />);
+    wrapper = shallow(<Fence token={token} renderTokens={() => {}} />);
   })
 
   it('wraps the content in a <pre> tag', () => {

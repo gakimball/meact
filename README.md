@@ -41,6 +41,22 @@ const renderer = markdownIt().use(emoji);
 <Markdown renderer={renderer} />
 ```
 
+You can also use custom components for any Markdown feature. Pass an object of React component functions/classes to the `components` prop of `<Markdown />`. Each key in the component list should be a Markdown feature&mdash;this could be a built-in feature, like `paragraph` or `list_item`, or it might be a feature from a plugin.
+
+```jsx
+const components = {
+  paragraph: ({ token, renderTokens }) => <p>renderTokens(token.nodes.slice(1, -1))</p>,
+};
+
+<Markdown input="The infinite is possible." components={components} />
+```
+
+Custom renderers get two props: `token`, which is the token being rendered, and `renderTokens`, a function to render the child nodes of the current token.
+
+Note the use of `slice()` when rendering the child tokens. Many Markdown features are represented as a set of three tokens: the `open` token (the first one), the `close` token (the last one), and then everything in the middle. In the case of a paragraph, as shown above, the first token in `token.nodes` is `paragraph_open`, and the last one is `paragraph_close`. The *middle* token has the actual text content, and can be recursively rendered. So, we slice out the first and last tokens in the list when rendering children.
+
+Not all Markdown features require this, but many do. When in doubt, inspect the contents of `token` and adjust your component to match what's there.
+
 ## Feature Support
 
 All of markdown-it's built-in features will render as React-based HTML. Plugins should work, but haven't been tested yet.

@@ -5,7 +5,7 @@ import tokenPropTypes from '../constants/tokenPropTypes';
 /**
  * Renders a `fence` token.
  */
-export default function Fence({ token, components }) {
+export default function Fence({ token }) {
   return (
     <pre>
       <code>
